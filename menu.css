@@ -1,0 +1,32 @@
+.menu-options{
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    gap:0;
+}
+.button-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+.settings{
+    background-color:#555555;
+}
+
+.play{
+    background-color: #6644cc;
+}
+
+.edit{
+    background-color: #eeaa00;
+}
+
+.browse{
+    background-color: #a5cc00;
+}
+
+.exit{
+    background-color: #ee3399;
+}
