@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,120 @@
     <link rel="stylesheet" href="menu-base.css">
     <link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
 
     <main id="scene" class="scene">
 
-<div id="menu-band" class="menu-band" hidden>
+        <div id="menu-band" class="menu-band" hidden>
 
-<button type="button" class="menu-button settings">
-    <span class="button-content">
-<img src="assets/settings.png" alt="">
-<span>设置</span>
-    </span>
-</button>
+            <button type="button" id="settings" class="menu-button settings">
+                <span class="button-content">
+                    <img src="assets/settings.png" alt="">
+                    <span>设置</span>
+                </span>
+            </button>
 
-<nav id="menu-options" class="menu-options">
+            <button type="button" id="back" class="menu-button back" hidden>
+                <span class="button-content">
+                    <img src="assets/back.png" alt="">
+                    <span>返回</span>
+                </span>
+            </button>
 
-<button type="button" class="menu-button play">
-    <span class="button-content">
-<img src="assets/play.png" alt="">
-<span>开始游玩</span>
-    </span>
-    </button>
-     
-<button type="button" class="menu-button edit">
-    <span class="button-content">
-<img src="assets/edit.png" alt="">
-<span>编辑</span>
-    </span>
-</button>
+            <nav id="menu-options" class="menu-options">
 
-<button type="button" class="menu-button browse">
-<span class="button-content">
-<img src="assets/browse.png" alt="">
-<span>浏览谱面</span>
-</span>
-</button>
+                <button type="button" id="play" class="menu-button play">
+                    <span class="button-content">
+                        <img src="assets/play.png" alt="">
+                        <span>开始游玩</span>
+                    </span>
+                </button>
 
-<button type="button" class="menu-button exit">
-    <span class="button-content">
-        <img src="assets/exit.png" alt="">
-        <span>退出</span>
-    </span>
-</button>
-</nav>
+                <button type="button" class="menu-button edit">
+                    <span class="button-content">
+                        <img src="assets/edit.png" alt="">
+                        <span>编辑</span>
+                    </span>
+                </button>
 
-</div>
+                <button type="button" class="menu-button browse">
+                    <span class="button-content">
+                        <img src="assets/browse.png" alt="">
+                        <span>浏览谱面</span>
+                    </span>
+                </button>
 
-<button type="button" id="logo-button" class="logo-button" aria-label="打开主菜单">
-<img src="assets/logo.png" alt="osu!logo">
-</button>
+                <button type="button" class="menu-button exit">
+                    <span class="button-content">
+                        <img src="assets/exit.png" alt="">
+                        <span>退出</span>
+                    </span>
+                </button>
+            </nav>
+
+            <nav id="play-menu" class="menu-options" hidden>
+
+                <button type="button" class="menu-button solo">
+                    <span class="button-content">
+                        <img src="assets/solo.png" alt="">
+                        <span>单人游戏</span>
+                    </span>
+                </button>
+
+                <button type="button" class="menu-button multi">
+                    <span class="button-content">
+                        <img src="assets/multi.png" alt="">
+                        <span>多人游戏</span>
+                    </span>
+                </button>
+
+                <button type="button" class="menu-button playlists">
+                    <span class="button-content">
+                        <img src="assets/playlists.png" alt="">
+                        <span>歌单模式</span>
+                    </span>
+                </button>
+
+                <button type="button" class="menu-button daily">
+                    <span class="button-content">
+                        <img src="assets/daily.png" alt="">
+                        <span>每日挑战</span>
+                    </span>
+                </button>
+
+            </nav>
+
+        </div>
+
+        <button type="button" id="logo-button" class="logo-button" aria-label="打开主菜单">
+            <img src="assets/logo.png" alt="osu!logo">
+        </button>
 
     </main>
-    
-<script>
-function showMessage(){
-document.getElementById("menu-band").hidden=false;
-document.getElementById("scene").classList.add("is-open");
-}
-document.getElementById("logo-button").addEventListener("click",showMessage);
 
-</script>
+    <script>
+        function showMessage() {
+            document.getElementById("menu-band").hidden = false;
+            document.getElementById("scene").classList.add("is-open");
+        }
+        document.getElementById("logo-button").addEventListener("click", showMessage);
+function showPlay(){
+    document.getElementById("settings").hidden=true;
+        document.getElementById("menu-options").hidden=true;
+    document.getElementById("play-menu").hidden=false;
+    document.getElementById("back").hidden=false;
+}
+document.getElementById("play").addEventListener("click",showPlay);
+function Back(){
+    document.getElementById("settings").hidden=false;
+        document.getElementById("menu-options").hidden=false;
+    document.getElementById("play-menu").hidden=true;
+    document.getElementById("back").hidden=true;
+}
+document.getElementById("back").addEventListener("click",Back);
+    </script>
 
 </body>
+
 </html>

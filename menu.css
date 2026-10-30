@@ -1,9 +1,21 @@
+.scene{
+    position:relative;
+}
+
+.logo-button{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
 .menu-options{
     display:flex;
     flex-direction:row;
     align-items:stretch;
     gap:0;
 }
+
 .button-content{
     display:flex;
     flex-direction:column;
@@ -29,4 +41,24 @@
 
 .exit{
     background-color: #ee3399;
+}
+
+.back{
+    background-color:#333a5e;
+}
+
+.solo{
+    background-color: #6644cc;
+}
+
+.multi,.playlists,.daily{
+    background-color: #5e3fba;
+}
+
+.daily{
+      width: calc(182 * var(--u));
+}
+
+.menu-button{
+    cursor:pointer;
 }
