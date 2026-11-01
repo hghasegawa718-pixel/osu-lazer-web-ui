@@ -1,4 +1,4 @@
-:root { --u: min(0.09765625vw, 0.130208333vh); }
+
 * { 
   box-sizing: border-box; 
 }
@@ -27,8 +27,6 @@ button {
   }
 
 .logo-button {
-  width: calc(512 * var(--u));
-  height: calc(512 * var(--u));
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -53,26 +51,18 @@ button {
   height: 100%; 
 }
 
-.scene.is-open .logo-button {
-  left: calc(50% - 228 * var(--u));
-  top: calc(50% + 20 * var(--u));
-  width: calc(256 * var(--u));
-  height: calc(256 * var(--u));
-}
+
 
 .menu-band {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(50% + 20 * var(--u));
-  height: calc(100 * var(--u));
   transform: translateY(-50%);
   background: #323232;
 }
 
 .menu-options {
   position: absolute;
-  left: calc(50% - 142 * var(--u));
   top: 0;
   height: 100%;
 }
@@ -80,19 +70,15 @@ button {
 .menu-button {
   flex-shrink: 0;
   position: relative;
-  width: calc(140 * var(--u));
   height: 100%;
   border: 0;
   padding: 0;
-  transform: skewX(-11.31deg);
-  box-shadow: -3px 0 6px #0002;
 }
 
 .button-content {
   position: relative;
   height: 100%;
   padding-bottom: calc(7 * var(--u));
-  transform: skewX(11.31deg);
   font-size: calc(11 * var(--u));
   line-height: 1.5;
   white-space: nowrap;
@@ -110,16 +96,11 @@ button {
 
 .settings,.back { 
   position: absolute; 
-  left: calc(50% - 478 * var(--u)); width: calc(160 * var(--u)); 
- }
+  }
 
 .settings .button-content,.back .button-content { 
   padding-right: calc(20 * var(--u)); 
 }
-
-.play,.solo{
-   width: calc(160 * var(--u)); 
-   }
 
 .play .button-content,.solo .button-content { 
   padding-left: calc(20 * var(--u));

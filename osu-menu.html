@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的osu!lazer练习</title>
     <link rel="stylesheet" href="menu-base.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="layout-support.css">
+    <link rel="stylesheet" href="interaction-support.css">
+        <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -16,6 +18,10 @@
         <div id="menu-band" class="menu-band" hidden>
 
             <button type="button" id="settings" class="menu-button settings">
+                <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                 <span class="button-content">
                     <img src="assets/settings.png" alt="">
                     <span>设置</span>
@@ -23,6 +29,10 @@
             </button>
 
             <button type="button" id="back" class="menu-button back" hidden>
+                <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                 <span class="button-content">
                     <img src="assets/back.png" alt="">
                     <span>返回</span>
@@ -32,6 +42,10 @@
             <nav id="menu-options" class="menu-options">
 
                 <button type="button" id="play" class="menu-button play">
+                    <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/play.png" alt="">
                         <span>开始游玩</span>
@@ -39,6 +53,10 @@
                 </button>
 
                 <button type="button" class="menu-button edit">
+                    <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/edit.png" alt="">
                         <span>编辑</span>
@@ -46,6 +64,10 @@
                 </button>
 
                 <button type="button" class="menu-button browse">
+                    <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/browse.png" alt="">
                         <span>浏览谱面</span>
@@ -53,6 +75,10 @@
                 </button>
 
                 <button type="button" class="menu-button exit">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/exit.png" alt="">
                         <span>退出</span>
@@ -63,6 +89,10 @@
             <nav id="play-menu" class="menu-options" hidden>
 
                 <button type="button" class="menu-button solo">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/solo.png" alt="">
                         <span>单人游戏</span>
@@ -70,6 +100,10 @@
                 </button>
 
                 <button type="button" class="menu-button multi">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/multi.png" alt="">
                         <span>多人游戏</span>
@@ -77,6 +111,10 @@
                 </button>
 
                 <button type="button" class="menu-button playlists">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/playlists.png" alt="">
                         <span>歌单模式</span>
@@ -84,6 +122,10 @@
                 </button>
 
                 <button type="button" class="menu-button daily">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
                     <span class="button-content">
                         <img src="assets/daily.png" alt="">
                         <span>每日挑战</span>
@@ -119,7 +161,7 @@ function Back(){
     document.getElementById("play-menu").hidden=true;
     document.getElementById("back").hidden=true;
 }
-document.getElementById("back").addEventListener("click",Back);
+document.getElementById("back").addEventListener("click",Back);   
     </script>
 
 </body>

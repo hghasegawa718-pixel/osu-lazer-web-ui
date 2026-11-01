@@ -1,0 +1,24 @@
+.menu-options { 
+    left: calc(50% - 228 * var(--u) + 256 * .74 / 2 * var(--u) - 20 * var(--u)); 
+
+}
+
+.menu-button { 
+    width: calc((var(--current-width, var(--base-width)) + 20) * var(--u)); 
+    margin-right: calc(-20 * var(--u));
+ }
+
+.button-background { 
+    left: calc(10 * var(--u));
+     width: calc(var(--current-width, var(--base-width)) * var(--u)); 
+    }
+
+.button-paint {
+     width: calc(2 * var(--base-width) * var(--u)); 
+    }
+
+.settings,.back { 
+    left: auto;
+     right: calc(50% + 228 * var(--u) + 256 * .74 / 2 * var(--u));
+      margin-right: calc(-20 * var(--u)); 
+    }

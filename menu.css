@@ -1,12 +1,30 @@
+:root { 
+     --u: min(calc(100vw / 1024), calc(100vh / 768));
+ }
+
 .scene{
     position:relative;
 }
+
+.scene.is-open .logo-button {
+  left: calc(50% - 228 * var(--u));
+  top: calc(50% + 20 * var(--u));
+  width: calc(256 * var(--u));
+  height: calc(256 * var(--u));
+}
+
+.menu-band{
+top: calc(50% + 20 * var(--u));
+  height: calc(100 * var(--u));
+    }
 
 .logo-button{
     position:absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    width: calc(512 * var(--u));
+  height: calc(512 * var(--u));
 }
 
 .menu-options{
@@ -23,42 +41,74 @@
     justify-content:flex-end;
 }
 
-.settings{
-    background-color:#555555;
+
+
+.menu-button{
+    --base-width:140;
+    cursor:pointer;
+    background:transparent;
 }
 
-.play{
-    background-color: #6644cc;
-}
 
-.edit{
-    background-color: #eeaa00;
-}
 
-.browse{
-    background-color: #a5cc00;
-}
-
-.exit{
-    background-color: #ee3399;
-}
-
-.back{
-    background-color:#333a5e;
-}
-
-.solo{
-    background-color: #6644cc;
-}
-
-.multi,.playlists,.daily{
-    background-color: #5e3fba;
+.settings,.back,.play,.solo{
+--base-width:160;
 }
 
 .daily{
-      width: calc(182 * var(--u));
+    --base-width:182;
 }
 
-.menu-button{
-    cursor:pointer;
+.menu-button:hover{
+    --current-width:1.5*var(--base-width);
+}
+
+   .button-background{
+    position:absolute;
+    top:0;
+    height:100%;
+    overflow:hidden;
+    transform:skewx(-11.31deg);
+    box-shadow: -3px 0 6px #0002;
+   }
+
+   .settings{
+    --button-color:#555555;
+}
+
+.play{
+    --button-color: #6644cc;
+}
+
+.edit{
+    --button-color: #eeaa00;
+}
+
+.browse{
+    --button-color: #a5cc00;
+}
+
+.exit{
+    --button-color: #ee3399;
+}
+
+.back{
+    --button-color:#333a5e;
+}
+
+.solo{
+    --button-color: #6644cc;
+}
+
+.multi,.playlists,.daily{
+    --button-color: #5e3fba;
+}
+
+.button-paint{
+    background-color:var(--button-color);
+    position:absolute;
+    top:0;
+height:100%;
+left:50%;
+transform:translateX(-50%)  skewX(11.31deg);
 }

@@ -1,0 +1,15 @@
+.menu-button,.button-content { 
+    pointer-events: none; 
+}
+
+.button-background {
+     pointer-events: auto; 
+    }
+
+.button-flash { 
+    position: absolute;
+     inset: 0;
+      background: white; 
+      opacity: 0;
+       mix-blend-mode: plus-lighter;
+     }
