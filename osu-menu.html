@@ -143,11 +143,35 @@
     </main>
 
     <script>
+        //对首页大LOGO执行点击操作的监听
         function showMessage() {
             document.getElementById("menu-band").hidden = false;
             document.getElementById("scene").classList.add("is-open");
         }
         document.getElementById("logo-button").addEventListener("click", showMessage);
+  //for循环让每个按钮都可以一次点击触发一次完整闪光
+  const Buttons=document.querySelectorAll(".menu-button");
+  const Flashstyle=[
+{opacity:0.9},
+{opacity:0},
+];
+const Flashtiming={
+duration:800,
+easing:"ease-out",
+iterations:1,
+};
+  for(const i of Buttons){
+const Flash=i.querySelector(".button-flash");
+let Animation;
+function Flashanimate(){
+if(Animation){
+    Animation.cancel();
+}
+Animation=Flash.animate(Flashstyle,Flashtiming);
+  }
+    i.addEventListener("click",Flashanimate);
+}
+//对点击"游玩"键以及点击"返回"键切换菜单的处理
 function showPlay(){
     document.getElementById("settings").hidden=true;
         document.getElementById("menu-options").hidden=true;
@@ -161,7 +185,23 @@ function Back(){
     document.getElementById("play-menu").hidden=true;
     document.getElementById("back").hidden=true;
 }
-document.getElementById("back").addEventListener("click",Back);   
+document.getElementById("back").addEventListener("click",Back);
+//这里开始设置鼠标移入按钮的时候播放音频
+const hoveraudio=new Audio("assets/button-hover.wav");
+async function playhover(){
+        hoveraudio.currentTime=0;
+        try{
+await    hoveraudio.play();
+        }
+        catch (err){
+            console.warn("音效播放失败",err);
+        }
+}
+for (const i of Buttons){
+    i.addEventListener("mouseenter",playhover);
+}
+//每次播放的时候重置播放位置，否则多按钮切换时可能只响一次声音
+
     </script>
 
 </body>

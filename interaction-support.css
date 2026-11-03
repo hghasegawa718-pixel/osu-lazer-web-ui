@@ -1,3 +1,4 @@
+
 .menu-button,.button-content { 
     pointer-events: none; 
 }
@@ -8,8 +9,13 @@
 
 .button-flash { 
     position: absolute;
-     inset: 0;
-      background: white; 
-      opacity: 0;
-       mix-blend-mode: plus-lighter;
+    inset: 0;
+    background: white; 
+    opacity: 0;
+    mix-blend-mode: plus-lighter;
+    transition:opacity 1000ms ease-out;
      }
+
+.menu-button:active .button-flash{
+    opacity:0.1;
+}

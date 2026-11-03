@@ -106,9 +106,6 @@ button {
   padding-left: calc(20 * var(--u));
  }
 
-.edit {  }
-.browse {  }
-.exit {  }
 
 button:focus-visible {
    outline: 3px solid white; 
