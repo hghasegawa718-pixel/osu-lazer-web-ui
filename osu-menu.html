@@ -14,6 +14,12 @@
 <body>
 
     <main id="scene" class="scene">
+<audio src="assets/audio/triangles-theme.mp3" class="bgm" ></audio>
+        <div id="startup" class="startup">
+<div id="startupscreen" class="startupscreen"></div>
+  <video src="assets/video/startup-triangles-av.webm" id="startupvideo" class="startupvideo" playsinline preload="auto" muted></video>
+        </div>
+      
 
         <div id="menu-band" class="menu-band" hidden>
 
@@ -23,23 +29,45 @@
                     <span class="button-flash"></span>
                 </span>
                 <span class="button-content">
-                    <img src="assets/settings.png" alt="">
+                    <img src="assets/image/settings.png" alt="">
                     <span>设置</span>
                 </span>
             </button>
 
-            <button type="button" id="back" class="menu-button back" hidden>
+            <button type="button" id="play-back" class="menu-button back" hidden>
                 <span  class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                 <span class="button-content">
-                    <img src="assets/back.png" alt="">
+                    <img src="assets/image/back.png" alt="">
                     <span>返回</span>
                 </span>
             </button>
 
-            <nav id="menu-options" class="menu-options">
+            <button type="button" id="edit-back" class="menu-button back" hidden>
+                <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                <span class="button-content">
+                    <img src="assets/image/back.png" alt="">
+                    <span>返回</span>
+                </span>
+            </button>
+
+            <button type="button" id="multi-back" class="menu-button back" hidden>
+                <span  class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                <span class="button-content">
+                    <img src="assets/image/back.png" alt="">
+                    <span>返回</span>
+                </span>
+            </button>
+
+            <nav id="main-menu" class="menu-options">
 
                 <button type="button" id="play" class="menu-button play">
                     <span  class="button-background" aria-hidden="true">
@@ -47,40 +75,40 @@
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/play.png" alt="">
+                        <img src="assets/image/play.png" alt="">
                         <span>开始游玩</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button edit">
+                <button type="button" id="edit" class="menu-button edit">
                     <span  class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/edit.png" alt="">
+                        <img src="assets/image/edit.png" alt="">
                         <span>编辑</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button browse">
+                <button type="button" id="browse" class="menu-button browse">
                     <span  class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/browse.png" alt="">
+                        <img src="assets/image/browse.png" alt="">
                         <span>浏览谱面</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button exit">
+                <button type="button" id="exit" class="menu-button exit">
                     <span class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/exit.png" alt="">
+                        <img src="assets/image/exit.png" alt="">
                         <span>退出</span>
                     </span>
                 </button>
@@ -88,47 +116,99 @@
 
             <nav id="play-menu" class="menu-options" hidden>
 
-                <button type="button" class="menu-button solo">
+                <button type="button" id="solo" class="menu-button solo">
                     <span class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/solo.png" alt="">
+                        <img src="assets/image/solo.png" alt="">
                         <span>单人游戏</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button multi">
+                <button type="button" id="multi" class="menu-button multi">
                     <span class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/multi.png" alt="">
+                        <img src="assets/image/multi.png" alt="">
                         <span>多人游戏</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button playlists">
+                <button type="button" id="playlists" class="menu-button playlists">
                     <span class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/playlists.png" alt="">
+                        <img src="assets/image/playlists.png" alt="">
                         <span>歌单模式</span>
                     </span>
                 </button>
 
-                <button type="button" class="menu-button daily">
+                <button type="button" id="daily" class="menu-button daily">
                     <span class="button-background" aria-hidden="true">
                     <span class="button-paint"></span>
                     <span class="button-flash"></span>
                 </span>
                     <span class="button-content">
-                        <img src="assets/daily.png" alt="">
+                        <img src="assets/image/daily.png" alt="">
                         <span>每日挑战</span>
+                    </span>
+                </button>
+
+            </nav>
+
+<nav id="edit-menu" class="menu-options" hidden>
+
+                <button type="button" class="menu-button beatmap-editor">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                    <span class="button-content">
+                        <img src="assets/image/beatmap-editor.png" alt="">
+                        <span>谱面编辑器</span>
+                    </span>
+                </button>
+
+                <button type="button" class="menu-button skin-editor">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                    <span class="button-content">
+                        <img src="assets/image/skin-editor.png" alt="">
+                        <span>皮肤编辑器</span>
+                    </span>
+                </button>
+
+            </nav>
+
+            <nav id="multi-menu" class="menu-options" hidden>
+
+                <button type="button" class="menu-button lounge">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                    <span class="button-content">
+                        <img src="assets/image/lounge.png" alt="">
+                        <span>大厅</span>
+                    </span>
+                </button>
+
+                <button type="button" class="menu-button ranked">
+                    <span class="button-background" aria-hidden="true">
+                    <span class="button-paint"></span>
+                    <span class="button-flash"></span>
+                </span>
+                    <span class="button-content">
+                        <img src="assets/image/ranked.png" alt="">
+                        <span>排位模式</span>
                     </span>
                 </button>
 
@@ -136,19 +216,29 @@
 
         </div>
 
-        <button type="button" id="logo-button" class="logo-button" aria-label="打开主菜单">
-            <img src="assets/logo.png" alt="osu!logo">
+        <button type="button" id="logo-button" class="logo-button" disabled aria-label="打开主菜单">
+            <span class="logo-fill"></span>
+            <img src="assets/image/logo.png" alt="osu!logo">
+            <span class="logo-flash"></span>
+            <video src="assets/video/logo-bars-v2-alpha.webm" class="logo-bar" loop muted playsinline></video>
         </button>
+
 
     </main>
 
     <script>
-        //对首页大LOGO执行点击操作的监听
-        function showMessage() {
-            document.getElementById("menu-band").hidden = false;
-            document.getElementById("scene").classList.add("is-open");
-        }
-        document.getElementById("logo-button").addEventListener("click", showMessage);
+    //开始播放logo附近的白条动画
+const logobar=document.querySelector(".logo-bar");
+async function playbar(){
+    try{
+        await logobar.play();
+    }
+    catch (err){
+        console.warn("视频播放失效",err);
+    }
+}
+playbar();
+
   //for循环让每个按钮都可以一次点击触发一次完整闪光
   const Buttons=document.querySelectorAll(".menu-button");
   const Flashstyle=[
@@ -171,23 +261,93 @@ Animation=Flash.animate(Flashstyle,Flashtiming);
   }
     i.addEventListener("click",Flashanimate);
 }
-//对点击"游玩"键以及点击"返回"键切换菜单的处理
+//让LOGO可以一次点击触发一次完整闪光
+const logobuttons=document.querySelector(".logo-button");
+    const logoFlash=logobuttons.querySelector(".logo-flash");
+let logoAnimation;
+function Flashlogo(){
+    if (logoAnimation){
+        logoAnimation.cancel();
+    }
+    logoAnimation=logoFlash.animate(Flashstyle,Flashtiming);
+}
+logobuttons.addEventListener("click", Flashlogo);
+//对点击logo的处理（区分首次进入和后续点击）
+const band=document.querySelector(".menu-band");
+function clicklogo(){
+    if(band.hidden){
+        band.hidden=false;
+document.getElementById("scene").classList.add("is-open");
+return;
+    }
+    const navs=band.querySelectorAll("nav");
+    for(const i of navs){
+        if(!i.hidden){
+            const firstbutton=i.querySelector("button");
+            if(firstbutton){
+                firstbutton.click();
+            }
+            return;
+        }
+    }
+}
+document.getElementById("logo-button").addEventListener("click",clicklogo);
+//对点击不同键切换菜单的处理
 function showPlay(){
     document.getElementById("settings").hidden=true;
-        document.getElementById("menu-options").hidden=true;
+        document.getElementById("main-menu").hidden=true;
     document.getElementById("play-menu").hidden=false;
-    document.getElementById("back").hidden=false;
+    document.getElementById("play-back").hidden=false;
 }
 document.getElementById("play").addEventListener("click",showPlay);
-function Back(){
-    document.getElementById("settings").hidden=false;
-        document.getElementById("menu-options").hidden=false;
+
+function playBack(){
     document.getElementById("play-menu").hidden=true;
-    document.getElementById("back").hidden=true;
+    document.getElementById("play-back").hidden=true;
+    document.getElementById("settings").hidden=false;
+    document.getElementById("main-menu").hidden=false;
 }
-document.getElementById("back").addEventListener("click",Back);
-//这里开始设置鼠标移入按钮的时候播放音频
-const hoveraudio=new Audio("assets/button-hover.wav");
+document.getElementById("play-back").addEventListener("click",playBack);
+
+function showEdit(){
+    document.getElementById("settings").hidden=true;
+    document.getElementById("main-menu").hidden=true;
+    document.getElementById("edit-menu").hidden=false;
+    document.getElementById("edit-back").hidden=false;
+}
+document.getElementById("edit").addEventListener("click",showEdit);
+
+function editBack(){
+    document.getElementById("edit-menu").hidden=true;
+    document.getElementById("edit-back").hidden=true;
+    document.getElementById("settings").hidden=false;
+    document.getElementById("main-menu").hidden=false;
+}
+document.getElementById("edit-back").addEventListener("click",editBack);
+
+function showMulti(){
+    document.getElementById("play-back").hidden=true;
+    document.getElementById("play-menu").hidden=true;
+    document.getElementById("multi-menu").hidden=false;
+    document.getElementById("multi-back").hidden=false;
+}
+document.getElementById("multi" ).addEventListener("click",showMulti);
+
+function multiBack(){
+    document.getElementById("multi-menu").hidden=true;
+    document.getElementById("multi-back").hidden=true;
+    document.getElementById("play-back").hidden=false;
+    document.getElementById("play-menu").hidden=false;
+}
+document.getElementById("multi-back").addEventListener("click",multiBack);
+
+function Exit(){
+    document.getElementById("menu-band").hidden=true;
+    document.getElementById("scene").classList.remove("is-open");
+}
+document.getElementById("exit").addEventListener("click",Exit);
+//设置鼠标移入按钮的时候播放音频
+const hoveraudio=new Audio("assets/audio/button-hover.wav");
 async function playhover(){
         hoveraudio.currentTime=0;
         try{
@@ -200,9 +360,69 @@ await    hoveraudio.play();
 for (const i of Buttons){
     i.addEventListener("mouseenter",playhover);
 }
-//每次播放的时候重置播放位置，否则多按钮切换时可能只响一次声音
+//设置鼠标点击大LOGO以及点击按钮时候的播放音频
+const buttonaudio=new Audio("assets/audio/button-play-select.wav");
+    async function playbutton(){
+        buttonaudio.currentTime=0;
+        try{
+            await buttonaudio.play();
+        }
+        catch (err){
+           console.warn("音效播放失败",err);
+        }
+    }
+    for (const i of Buttons){
+        i.addEventListener("click",playbutton);
+    }
 
-    </script>
+    const logoaudio=new Audio("assets/audio/osu-logo-select.wav");
+async function playlogo(){
+    logoaudio.currentTime=0;
+    try{
+        await logoaudio.play();
+    }
+    catch (err) {
+        console.warn("音效播放失败",err);
+    }
+}
+document.getElementById("logo-button").addEventListener("click",playlogo);
+//设置自动播放的开场动画以及背景音乐
+const bgm=document.querySelector(".bgm");
+async function playvideo(){
+try{
+    await startupvideo.play();
+    document.getElementById("startupscreen").hidden=true;
+}
+catch (err){
+    console.warn("视频播放失效",err);
+    document.getElementById("startupscreen").hidden=true;
+    startupvideo.hidden=true;
+    document.querySelector(".logo-button").disabled=false;
+}
+}
+
+function display(){
+    document.getElementById("startupscreen").hidden=true;
+    startupvideo.hidden=true;
+    document.querySelector(".logo-button").disabled=false;
+}
+startupvideo.addEventListener("ended",display);
+playvideo();
+
+async function playbgm(){
+    try{
+        await bgm.play();
+    }
+        catch (err){
+            console.warn("音频播放失效",err);
+        }
+}
+playbgm();
+   bgm.addEventListener("ended",function (){
+bgm.currentTime=4;
+playbgm();
+   });
+   </script>
 
 </body>
 

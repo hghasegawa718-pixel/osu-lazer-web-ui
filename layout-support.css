@@ -1,24 +1,134 @@
-.menu-options { 
-    left: calc(50% - 228 * var(--u) + 256 * .74 / 2 * var(--u) - 20 * var(--u)); 
-
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 240px;
+  overflow: hidden;
+  background-color: #241c2a;
+  background-image: url("assets/image/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.menu-button { 
-    width: calc((var(--current-width, var(--base-width)) + 20) * var(--u)); 
-    margin-right: calc(-20 * var(--u));
- }
+.logo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(512 * var(--u));
+  height: calc(512 * var(--u));
+  transform: translate(-50%, -50%);
+}
 
-.button-background { 
-    left: calc(10 * var(--u));
-     width: calc(var(--current-width, var(--base-width)) * var(--u)); 
-    }
+.scene.is-open .logo-button {
+  top: calc(50% + 20 * var(--u));
+  left: calc(50% - 228 * var(--u));
+  width: calc(256 * var(--u));
+  height: calc(256 * var(--u));
+}
+
+.menu-band {
+  position: absolute;
+  top: calc(50% + 20 * var(--u));
+  right: 0;
+  left: 0;
+  height: calc(100 * var(--u));
+  background: #323232;
+  transform: translateY(-50%);
+}
+
+.menu-options {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 228 * var(--u) + 256 * .74 / 2 * var(--u) - 20 * var(--u));
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  height: 100%;
+}
+
+.menu-button {
+  position: relative;
+  flex-shrink: 0;
+  width: calc((var(--current-width, var(--base-width)) + 20) * var(--u));
+  height: 100%;
+  margin-right: calc(-20 * var(--u));
+  padding: 0;
+  border: 0;
+}
+
+.settings, .back {
+  position: absolute;
+  right: calc(50% + 228 * var(--u) + 256 * .74 / 2 * var(--u));
+  left: auto;
+  margin-right: calc(-20 * var(--u));
+}
+
+.button-background {
+  left: calc(10 * var(--u));
+  width: calc(var(--current-width, var(--base-width)) * var(--u));
+}
 
 .button-paint {
-     width: calc(2 * var(--base-width) * var(--u)); 
-    }
+  width: calc(2 * var(--base-width) * var(--u));
+}
 
-.settings,.back { 
-    left: auto;
-     right: calc(50% + 228 * var(--u) + 256 * .74 / 2 * var(--u));
-      margin-right: calc(-20 * var(--u)); 
-    }
+.button-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-bottom: calc(7 * var(--u));
+  font-size: calc(11 * var(--u));
+  line-height: 1.5;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px #0005;
+}
+
+.settings .button-content, .back .button-content {
+  padding-right: calc(20 * var(--u));
+}
+
+.play .button-content, .solo .button-content {
+  padding-left: calc(20 * var(--u));
+}
+
+.button-content > img {
+  position: absolute;
+  top: calc(30 * var(--u));
+  width: calc(32 * var(--u));
+  height: calc(32 * var(--u));
+  object-fit: contain;
+  filter: drop-shadow(0 2px 1px #0004);
+}
+
+.logo-bar {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+}
+
+.startupscreen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.startupvideo {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

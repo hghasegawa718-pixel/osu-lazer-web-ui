@@ -1,21 +1,69 @@
-
-.menu-button,.button-content { 
-    pointer-events: none; 
+.menu-button, .button-content {
+  pointer-events: none;
 }
 
 .button-background {
-     pointer-events: auto; 
-    }
+  pointer-events: auto;
+}
 
-.button-flash { 
-    position: absolute;
-    inset: 0;
-    background: white; 
-    opacity: 0;
-    mix-blend-mode: plus-lighter;
-    transition:opacity 1000ms ease-out;
-     }
+.button-flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  mix-blend-mode: plus-lighter;
+  transition: opacity 1000ms ease-out;
+}
 
-.menu-button:active .button-flash{
-    opacity:0.1;
+.menu-button:active .button-flash {
+  opacity: 0.1;
+}
+
+.logo-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: 50%;
+  background: white;
+  opacity: 0;
+  mix-blend-mode: plus-lighter;
+  transition: opacity 1000ms ease-out;
+}
+
+.logo-button:active .logo-flash {
+  opacity: 0.1;
+}
+
+.menu-button, .button-background {
+  transition: width 500ms var(--menu-elastic);
+}
+
+.menu-button:hover {
+  --current-width: 1.5*var(--base-width);
+}
+
+@keyframes menu-icon-bounce {
+  0% {
+    transform: translateY(0) rotate(8deg) scale(1.2,1.08);
+  }
+
+  25% {
+    transform: translateY(calc(-10*var(--u))) scale(1.2);
+  }
+
+  50% {
+    transform: translateY(0) rotate(-8deg) scale(1.2,1.08);
+  }
+
+  75% {
+    transform: translateY(calc(-10*var(--u))) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0) rotate(8deg) scale(1.2,1.08);
+  }
+}
+
+.menu-button:hover img {
+  animation: menu-icon-bounce 1s ease-in-out infinite;
 }
