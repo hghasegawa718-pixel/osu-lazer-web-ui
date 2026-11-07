@@ -4,8 +4,8 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  transition: left 200ms ease-in, top 200ms ease-in, width 200ms ease-in, height 200ms ease-in;
-  cursor: pointer;
+  transition: left 100ms ease-in, top 100ms ease-in, width 100ms ease-in, height 100ms ease-in;
+  cursor: url("assets/image/others/menu-cursor-web.png") 0 0,auto;
 }
 
 .logo-fill {
@@ -27,7 +27,7 @@
 .menu-button {
   --base-width: 140;
   background: transparent;
-  cursor: pointer;
+  cursor: url("assets/image/others/menu-cursor-web.png") 0 0,auto;
 }
 
 .settings, .back, .play, .solo {

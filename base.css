@@ -1,6 +1,8 @@
 :root {
   --u: min(calc(100vw / 1024), calc(100vh / 768));
   --menu-elastic: linear(0, 0.64642, 1.24995, 1.35348, 1.1249, 0.91149, 0.87485, 0.95563, 1.03105, 1.04397, 1.01538, 0.98868, 0.98408, 0.99416, 1.00356, 1.00516, 1.00156, 0.9982, 0.99761, 0.99885, 1);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 * {
@@ -11,6 +13,7 @@ body {
   margin: 0;
   font-family: "Microsoft YaHei", sans-serif;
   color: white;
+  cursor: url("assets/image/others/menu-cursor-web.png") 0 0,auto;
 }
 
 button {

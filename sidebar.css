@@ -1,0 +1,84 @@
+.sidebar {
+  position: absolute;
+  top: calc(-40*var(--u));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: calc(40*var(--u));
+  background-color: #1a1a1a;
+  transition: top 100ms ease-in;
+}
+
+.scene.is-open .sidebar {
+  top: 0;
+}
+
+.sidebar-button {
+  position: relative;
+  width: calc(60*var(--u));
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.sidebar-button >img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transform: translate(-50%,-50%);
+}
+
+.mode-band {
+  position: relative;
+  display: flex;
+  gap: 0;
+  height: 100%;
+}
+
+.mode-band .sidebar-button {
+  width: calc(45*var(--u));
+}
+
+.mode-band > .sidebar-button {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.mode-indicator {
+  position: absolute;
+  bottom: calc(1 * var(--u));
+  left: 0;
+  width: calc(45 * var(--u));
+  height: calc(3 * var(--u));
+  transform: translateX(0);
+  transition: transform 200ms linear(0, 0.64642, 1.24995, 1.35348, 1.1249, 0.91149, 0.87485, 0.95563, 1.03105, 1.04397, 1.01538, 0.98868, 0.98408, 0.99416, 1.00356, 1.00516, 1.00156, 0.9982, 0.99761, 0.99885, 1);
+  pointer-events: none;
+}
+
+.mode-line {
+  display: block;
+  width: calc(18 * var(--u));
+  height: 100%;
+  margin: 0 auto;
+  border-radius: calc(3 * var(--u));
+  background: white;
+}
+
+.sidebar-flash {
+  position: absolute;
+  inset: 5%;
+  border-radius: calc(5*var(--u));
+  background: white;
+  opacity: 0;
+  mix-blend-mode: plus-lighter;
+  transition: opacity 100ms ease-in;
+}
+
+.sidebar-button:hover .sidebar-flash {
+  opacity: 0.3;
+}
